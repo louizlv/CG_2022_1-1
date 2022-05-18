@@ -67,7 +67,7 @@ int main()
 //#endif
 
 	// Criação da janela GLFW
-	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "Hello Triangulo! - Prof. Vini Cassol", nullptr, nullptr);
+	GLFWwindow* window = glfwCreateWindow(WIDTH, HEIGHT, "minas gerais KKKK", nullptr, nullptr);
 	glfwMakeContextCurrent(window);
 
 	// Fazendo o registro da função de callback para a janela GLFW
@@ -115,7 +115,8 @@ int main()
 		glfwPollEvents();
 
 		// Limpa o buffer de cor
-		glClearColor(0.8f, 0.8f, 0.8f, 1.0f); //cor de fundo
+		//glClearColor(2.0f, 0.5f, 1.0f, 0.0f); //cor de fundo
+		glClearColor(2.0f, 2.0f, 2.0f, 0.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 
 		glLineWidth(10);
@@ -123,16 +124,18 @@ int main()
 
 		// Chamada de desenho - drawcall
 		// Poligono Preenchido - GL_TRIANGLES
-		glUniform4f(colorLoc, 0.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
+		glUniform4f(colorLoc, 1.0f, 0.0f, 0.0f, 1.0f); //enviando cor para variável uniform inputColor
 		glBindVertexArray(VAO);
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 
 		// Chamada de desenho - drawcall
 		// CONTORNO - GL_LINE_LOOP
 		// PONTOS - GL_POINTS
-		glUniform4f(colorLoc, 1.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
-		glDrawArrays(GL_POINTS, 0, 3);
-		glBindVertexArray(0);
+		// 
+		// comentado o código de pontos para retirá-los
+		//glUniform4f(colorLoc, 1.0f, 0.0f, 1.0f, 1.0f); //enviando cor para variável uniform inputColor
+		//glDrawArrays(GL_POINTS, 0, 3);
+		//glBindVertexArray(0);
 
 		// Troca os buffers da tela
 		glfwSwapBuffers(window);
