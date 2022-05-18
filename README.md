@@ -3,4 +3,6 @@ Repositório das aulas de Computação Gráfica em 2022/1. No repositório, alé
 
 Os projetos foram criados e compilados utilizando o Visual Studio 2019. Dependendo da versão disponível em sua máquina, pode ser que você precise fazer alguma atualização das bibliotecas ou diretórios. Ao abrir o projeto, pode ser que seja necessário mudar a arquitetura para x86 (caso queira usar as dependências que vieram com o projeto).
 
-testando
+--- HelloTriangle
+
+![image](https://user-images.githubusercontent.com/48605865/169097474-2c1865f6-dea0-4ab9-95c3-983403e69536.png)
